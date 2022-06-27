@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script type="text/babel">
+
+        function Cat({ name }) {
+            return <h1>The cat's name is {name}</h1>;
+        }
+//пример с ошибкой
+        //     function BadCat({ name }) {
+        //         return (
+        // <h1>The cat's name is {name}</h1> 
+        // <p>He’s good.</p>
+        //         );
+        //     }
+// пример в полном синтаксисе
+        // function GoodCat({ name }) {
+        //     return (
+        //         <React.Fragment>
+        //             <h1>The cat's name is {name}</h1>
+        //             <p>He's good.</p>
+        //         </React.Fragment>
+        //     );
+        // }
+// пример в коротком синаксисе
+        // function Cat({ name }) {
+        //     return (
+        //         <>
+        //             <h1>The cat's name is {name}</h1>
+        //             <p>He’s good.</p>
+        //         </>
+        //     );
+        // }
+
+        ReactDOM.render(<Cat name="Jungle" />, document.getElementById("root"));
+
+    </script>
+
+</body>
+
+</html>

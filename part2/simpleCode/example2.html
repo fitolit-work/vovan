@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script type="text/babel">
+        // Данные, массив объектов Recipes 
+        const data = [
+            {
+                name: 'Friday 220624',
+                description: 'Complete as many rounds as possible in 20 minutes of:',
+                exercises: [
+                    { count: '12', name: 'handstand push-ups' },
+                    { count: '8', name: 'bar muscle-ups' },
+                    { count: '4', name: 'power cleans' }
+                ]
+            },
+            {
+                name: 'Thursday 220623',
+                description: 'Complete as many rounds as possible in 12 minutes of:',
+                exercises: [
+                    { count: '5', name: 'deadlifts' },
+                    { count: '10', name: 'weighted box step-ups' },
+                ]
+            }
+        ];
+
+
+        function Day({ name, description, exercises }) {
+            return ( // не затрагивать тему того что внутри должен быть один элемент
+                <div> 
+                    <h2>{name}</h2>
+                    <p>{description}</p>
+                    <ul className='ex-list'>
+                        {exercises.map((exercise, i) => (
+                            <li key={i}>{exercise.count} {exercise.name}</li>
+                        ))}
+                    </ul>
+                </div>
+            )
+        }
+
+
+        function Trening({ trenings, title }) {
+            return (
+                <article>
+                    <header>
+                        <h1>{title}</h1>
+                    </header>
+                    <div className="recipes">
+                        {trenings.map((trening, i) => (
+                            <Day
+                                key={i}
+                                name={trening.name}
+                                description={trening.description}
+                                exercises={trening.exercises}
+                            />))}
+                    </div>
+                </article>
+            )
+        }
+
+        ReactDOM.render(
+            <Trening trenings={data} title="Traning week" />,
+            document.getElementById("root")
+        );
+
+    </script>
+
+</body>
+
+</html>

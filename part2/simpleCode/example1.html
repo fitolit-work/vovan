@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React Recipes</title>
+</head>
+
+<body>
+    <div id="react-container"></div>
+
+
+    <script type="text/babel">
+
+        const exList = [
+            '12 handstand push-ups',
+            '8 bar muscle-ups',
+            '4 power cleans'
+        ]
+
+        const MyTitle = <h1>Новый заголовок</h1>; // если попробовать поставить так, то будет ошибка.
+        
+        let title = 'Title from variable';
+        const ExList = function ({data}) {
+            return (
+                <ul>
+                    {data.map((exercise, i) => <li key={i}>{exercise}</li>)};
+                </ul>
+            )
+        }
+
+        ReactDOM.render(
+            <div>
+                <h1>Новый заголовок</h1>
+                <h1>{title}</h1>
+                <input type="checkbox" defaultChecked={false} />
+                <h1>{"Hello" + title}</h1>
+                <h1>{title.toLowerCase()}</h1>
+                <ExList data={exList}/>
+            </div>,
+            document.getElementById('react-container')
+        )
+    </script>
+
+</body>
+</html>
