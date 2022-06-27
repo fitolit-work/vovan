@@ -1,6 +1,6 @@
-// import getValue from './modules/get_value.js';
-// import mapArray from './modules/map.js';
-// import {getValue, mapArray} from './modules/helpers_array.js';
+import getValue from './modules/get_value.js';
+import mapArray from './modules/map.js';
+import {getValue, mapArray} from './modules/helpers_array.js';
 import { getValue, mapArray,p } from './modules/helpers_array2.js';
 
 
