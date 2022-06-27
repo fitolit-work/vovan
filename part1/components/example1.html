@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <title>Recipes</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script>
+
+        function ExerciseList(){
+            return React.createElement(
+                'ul',
+                {className: 'exercise-list'},
+                React.createElement('li', null, '12 handstand push-ups'),
+                React.createElement('li', null, '8 bar muscle-ups'),
+                React.createElement('li', null, '4 power cleans'),
+            )
+        }
+
+        ReactDOM.render(
+            React.createElement(ExerciseList, null, null),
+            document.getElementById('root')
+        );
+
+        console.log(ExerciseList());
+
+    </script>
+
+</body>
+
+</html>
