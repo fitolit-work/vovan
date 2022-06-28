@@ -1,24 +1,42 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Medium.ttf");
+}
+@font-face {
+    font-family: "Open Sans EB";
+    src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-ExtraBold.ttf");
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    font-family: "Open Sans";
 }
 
-body{
+body {
     // font-family: 'Op';
 }
 
-a {
+a,
+button {
     display: inline-block;
 }
 
 button {
-    display: inline-block;
     outline: none;
     border: none;
     background: none;
+}
+
+.site-link {
+    background: rgb(1, 84, 136);
+    padding: 0.5em 2em;
+    color: white;
+    text-transform: uppercase;
 }
 
 .site-header {
@@ -26,35 +44,154 @@ button {
     background: #000;
     color: white;
 
-
-
     &__content {
         margin: 0 auto;
         max-width: 1420px;
-        display: flex;
-        border: 1px solid rgb(234, 230, 230);
+        // border: 1px solid rgb(234, 230, 230);
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__left-column {}
 
-    &__logo {}
-
-    &__right-column {}
-
-    &__brand-menu {}
-
-    &__brand-btn{
-        color: white;
-        text-transform: uppercase;
-        padding: 1.2em;
-        font-weight: 900;
-        & + span{
-            font-weight: 900;
-            border-right: 0.2em solid #fff;
+    &__logo {
+        & img {
+            width: 200px;
         }
     }
 
-    &__main-menu {}
+    &__right-column {}
+
+    &__brand-menu {
+        margin-bottom: 1.2em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__brand-btn {
+        color: white;
+        text-transform: uppercase;
+        padding: 0.5em 1em;
+        font-weight: 900;
+        font-size: 1.1em;
+        margin: 0 .3em;
+
+        &+span {
+            font-weight: 900;
+            border-right: 0.2em solid #fff;
+            margin: 0.3em 0;
+            height: 1.2em;
+        }
+
+        &_log-in {
+            background: rgb(1, 84, 136);
+            margin-left: 1em;
+        }
+
+        &:hover {
+            background: rgb(1, 84, 136);
+        }
+    }
+
+    &__main-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__menu-link {
+        color: white;
+        text-transform: uppercase;
+        padding: .5em 1em;
+        font-size: 1.1em;
+        margin: 0 .3em;
+        &:hover {
+            background: rgb(1, 84, 136);
+        }
+        & i{
+            font-size: 1.3em;
+        }
+    }
+}
+
+.banner {
+    background: url(../images/dotcom-banner-sledpull3-1920x960.jpg);
+
+    background-position: 0% 30%;
+    min-height: 600px;
+
+    &__gradient {
+        min-height: 600px;
+        background: linear-gradient(0deg, rgba(74, 74, 78, 0.6296296296296297) 0%, rgba(4, 4, 0, 0.06963424437299037) 100%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 4em;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 4em;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 0.1em;
+        font-family: "Open Sans EB";
+    }
+
+    &__description {
+        color: white;
+        font-weight: 300;
+        font-size: 1.4em;
+        margin-bottom: 1em;
+    }
+
+    &__links {
+        margin-bottom: 0.1em;
+    }
+
+    &__link {
+        margin-right: 10px;
+    }
+}
+
+
+.announcement {
+    padding: 1em 2em;
+    max-width: 1128px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background: white;
+    margin-top: -6em;
+
+    &__text {
+
+    }
+
+    &__title {
+        font-size: 2em;
+        // letter-spacing: -0.1em;
+        font-weight: 700;
+    }
+
+    &__description {
+        font-size: 1em;
+        line-height: 1.5;
+        color: #6d6c6c;
+        font-weight: 600;
+    }
+
+    &__link {
+        margin-left: 3em;
+        flex-shrink: 0;
+        flex-grow: 1;
+    }
 }
