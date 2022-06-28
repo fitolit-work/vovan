@@ -1,4 +1,5 @@
 var path = require("path");
+const { EvalDevToolModulePlugin } = require("webpack");
 module.exports = {
     entry: "./src/index.js",
     output: {
@@ -7,5 +8,6 @@ module.exports = {
     },
     module: {
         rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }]
-    }
+    },
+    devtool: "source-map",
 };
