@@ -19,7 +19,7 @@
 }
 
 body {
-  // font-family: 'Op';
+
 }
 
 a,
@@ -147,83 +147,135 @@ button {
   }
 }
 
-.banner {
-  background: url(../images/dotcom-banner-sledpull3-1920x960.jpg) 0 30%;
-  min-height: 600px;
-
-  &__gradient {
+.site-main {
+  .banner {
+    background: url(../images/dotcom-banner-sledpull3-1920x960.jpg) no-repeat 0 30%;
+    background-size: cover;
     min-height: 600px;
-    background: linear-gradient(0deg, rgba(74, 74, 78, 0.6296296296296297) 0%, rgba(4, 4, 0, 0.06963424437299037) 100%);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    &__gradient {
+      min-height: 600px;
+      background: linear-gradient(0deg, rgba(74, 74, 78, 0.6296296296296297) 0%, rgba(4, 4, 0, 0.06963424437299037) 100%);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 4em;
+    }
+
+    &__title {
+      font-weight: 900;
+      font-size: 4em;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 0.1em;
+      font-family: "Open Sans EB", sans-serif;
+    }
+
+    &__description {
+      color: white;
+      font-weight: 300;
+      font-size: 1.4em;
+      margin-bottom: 1em;
+    }
+
+    &__links {
+      margin-bottom: 0.1em;
+    }
+
+    &__link {
+      margin-right: 10px;
+    }
   }
 
-  &__content {
-    max-width: 1200px;
+  .container {
     margin: 0 auto;
+    max-width: 1228px;
     padding: 0 4em;
+
+    .announcement {
+      padding: 1em 2em;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      background: white;
+      margin-top: -6em;
+      margin-bottom: 4em;
+
+      &__text {
+
+      }
+
+      &__title {
+        font-size: 2em;
+        // letter-spacing: -0.1em;
+        font-weight: 700;
+      }
+
+      &__description {
+        font-size: 1em;
+        line-height: 1.5;
+        color: #6d6c6c;
+        font-weight: 600;
+      }
+
+      &__link {
+        margin-left: 3em;
+        flex-shrink: 0;
+        flex-grow: 1;
+      }
+    }
+
+    .day {
+
+      .day__switcher {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        .day__left-arrow, .day__right-arrow{
+          font-size: 3em;
+          font-weight: 600;
+          color: #075dc6;
+        }
+        .day__right-arrow:hover{
+          color: #287bef;
+          cursor: pointer;
+        }
+        .day__left-arrow:hover{
+          color: #287bef;
+          cursor: pointer;
+        }
+
+        .day__name{
+          font-family: "Open Sans EB", sans-serif;
+          font-size: 1.6em;
+          line-height: 1.5;
+          color: #6d6c6c;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        .day__number{
+          font-family: "Open Sans EB", sans-serif;
+          font-size: 4em;
+          font-weight: 900;
+          line-height: 1.05;
+          padding: 0 2em;
+        }
+      }
+
+
+    }
   }
 
-  &__title {
-    font-weight: 900;
-    font-size: 4em;
-    text-transform: uppercase;
-    color: white;
-    margin-bottom: 0.1em;
-    font-family: "Open Sans EB", sans-serif;
-  }
-
-  &__description {
-    color: white;
-    font-weight: 300;
-    font-size: 1.4em;
-    margin-bottom: 1em;
-  }
-
-  &__links {
-    margin-bottom: 0.1em;
-  }
-
-  &__link {
-    margin-right: 10px;
-  }
 }
 
 
-.announcement {
-  padding: 1em 2em;
-  max-width: 1128px;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  background: white;
-  margin-top: -6em;
-
-  &__text {
-
-  }
-
-  &__title {
-    font-size: 2em;
-    // letter-spacing: -0.1em;
-    font-weight: 700;
-  }
-
-  &__description {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #6d6c6c;
-    font-weight: 600;
-  }
-
-  &__link {
-    margin-left: 3em;
-    flex-shrink: 0;
-    flex-grow: 1;
-  }
-}
 
 
 

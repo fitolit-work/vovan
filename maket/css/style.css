@@ -113,23 +113,24 @@ button {
   font-size: 1.3em;
 }
 
-.banner {
-  background: url(../images/dotcom-banner-sledpull3-1920x960.jpg) 0 30%;
+.site-main .banner {
+  background: url(../images/dotcom-banner-sledpull3-1920x960.jpg) no-repeat 0 30%;
+  background-size: cover;
   min-height: 600px;
 }
-.banner__gradient {
+.site-main .banner__gradient {
   min-height: 600px;
   background: linear-gradient(0deg, rgba(74, 74, 78, 0.6296296296) 0%, rgba(4, 4, 0, 0.0696342444) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.banner__content {
+.site-main .banner__content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 4em;
 }
-.banner__title {
+.site-main .banner__title {
   font-weight: 900;
   font-size: 4em;
   text-transform: uppercase;
@@ -137,42 +138,79 @@ button {
   margin-bottom: 0.1em;
   font-family: "Open Sans EB", sans-serif;
 }
-.banner__description {
+.site-main .banner__description {
   color: white;
   font-weight: 300;
   font-size: 1.4em;
   margin-bottom: 1em;
 }
-.banner__links {
+.site-main .banner__links {
   margin-bottom: 0.1em;
 }
-.banner__link {
+.site-main .banner__link {
   margin-right: 10px;
 }
-
-.announcement {
+.site-main .container {
+  margin: 0 auto;
+  max-width: 1228px;
+  padding: 0 4em;
+}
+.site-main .container .announcement {
   padding: 1em 2em;
-  max-width: 1128px;
   display: flex;
   align-items: center;
   margin: 0 auto;
   background: white;
   margin-top: -6em;
+  margin-bottom: 4em;
 }
-.announcement__title {
+.site-main .container .announcement__title {
   font-size: 2em;
   font-weight: 700;
 }
-.announcement__description {
+.site-main .container .announcement__description {
   font-size: 1em;
   line-height: 1.5;
   color: #6d6c6c;
   font-weight: 600;
 }
-.announcement__link {
+.site-main .container .announcement__link {
   margin-left: 3em;
   flex-shrink: 0;
   flex-grow: 1;
+}
+.site-main .container .day .day__switcher {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.site-main .container .day .day__switcher .day__left-arrow, .site-main .container .day .day__switcher .day__right-arrow {
+  font-size: 3em;
+  font-weight: 600;
+  color: #075dc6;
+}
+.site-main .container .day .day__switcher .day__right-arrow:hover {
+  color: #287bef;
+  cursor: pointer;
+}
+.site-main .container .day .day__switcher .day__left-arrow:hover {
+  color: #287bef;
+  cursor: pointer;
+}
+.site-main .container .day .day__switcher .day__name {
+  font-family: "Open Sans EB", sans-serif;
+  font-size: 1.6em;
+  line-height: 1.5;
+  color: #6d6c6c;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.site-main .container .day .day__switcher .day__number {
+  font-family: "Open Sans EB", sans-serif;
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1.05;
+  padding: 0 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
