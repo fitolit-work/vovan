@@ -12,7 +12,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 
 a,
@@ -61,6 +61,7 @@ button {
   font-weight: 900;
   font-size: 1.1em;
   margin: 0 0.3em;
+  position: relative;
 }
 .site-header__brand-btn + span {
   font-weight: 900;
@@ -74,6 +75,22 @@ button {
 }
 .site-header__brand-btn:hover {
   background: rgb(1, 84, 136);
+}
+.site-header__brand-btn:hover > .site-header__sub-menu {
+  background: rgb(255, 255, 255);
+  display: block;
+  left: 0;
+  top: 100%;
+}
+.site-header__brand-btn_log-in:hover {
+  background: rgb(0, 102, 171);
+}
+.site-header__sub-menu {
+  display: none;
+  position: absolute;
+  min-width: 15em;
+  padding: 1em;
+  text-align: left;
 }
 .site-header__main-menu {
   display: flex;
@@ -95,8 +112,7 @@ button {
 }
 
 .banner {
-  background: url(../images/dotcom-banner-sledpull3-1920x960.jpg);
-  background-position: 0% 30%;
+  background: url(../images/dotcom-banner-sledpull3-1920x960.jpg) 0 30%;
   min-height: 600px;
 }
 .banner__gradient {
@@ -117,7 +133,7 @@ button {
   text-transform: uppercase;
   color: white;
   margin-bottom: 0.1em;
-  font-family: "Open Sans EB";
+  font-family: "Open Sans EB", sans-serif;
 }
 .banner__description {
   color: white;
@@ -155,4 +171,6 @@ button {
   margin-left: 3em;
   flex-shrink: 0;
   flex-grow: 1;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
