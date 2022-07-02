@@ -37,6 +37,8 @@ button {
   padding: 1.2em;
   background: #000;
   color: white;
+  position: sticky;
+  top: 0;
 }
 .site-header__content {
   margin: 0 auto;

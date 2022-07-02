@@ -45,6 +45,9 @@ button {
   background: #000;
   color: white;
 
+  position: sticky;
+  top: 0;
+
   &__content {
     margin: 0 auto;
     max-width: 1420px;
@@ -221,5 +224,6 @@ button {
     flex-grow: 1;
   }
 }
+
 
 

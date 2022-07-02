@@ -25,6 +25,14 @@ sketch
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
+!.idea/shelf/
+!.idea/workspace.xml
+# Editor-based HTTP Client requests
+!.idea/httpRequests/
+# Datasource local storage ignored files
+!.idea/dataSources/
+!.idea/dataSources.local.xml
+
 # Local History for Visual Studio Code
 .history/
 
