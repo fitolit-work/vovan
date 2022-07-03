@@ -237,22 +237,25 @@ button {
         display: flex;
         justify-content: center;
         text-align: center;
+        margin-bottom: 3em;
 
-        .day__left-arrow, .day__right-arrow{
+        .day__left-arrow, .day__right-arrow {
           font-size: 3em;
           font-weight: 600;
           color: #075dc6;
         }
-        .day__right-arrow:hover{
-          color: #287bef;
-          cursor: pointer;
-        }
-        .day__left-arrow:hover{
+
+        .day__right-arrow:hover {
           color: #287bef;
           cursor: pointer;
         }
 
-        .day__name{
+        .day__left-arrow:hover {
+          color: #287bef;
+          cursor: pointer;
+        }
+
+        .day__name {
           font-family: "Open Sans EB", sans-serif;
           font-size: 1.6em;
           line-height: 1.5;
@@ -260,7 +263,8 @@ button {
           font-weight: 600;
           text-transform: uppercase;
         }
-        .day__number{
+
+        .day__number {
           font-family: "Open Sans EB", sans-serif;
           font-size: 4em;
           font-weight: 900;
@@ -268,9 +272,30 @@ button {
           padding: 0 2em;
         }
       }
-
-
     }
+
+    .workout {
+      display: flex;
+      justify-content: space-between;
+
+      .workout__exercise {
+        width: 48%;
+        padding-right: 2em;
+
+
+        .workout__exercise-header-wrapper {
+          border-bottom: 1px solid grey;
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 1em;
+        }
+      }
+
+      .workout__tips {
+        width: 48%;
+      }
+    }
+
   }
 
 }
